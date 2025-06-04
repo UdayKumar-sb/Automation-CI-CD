@@ -35,7 +35,7 @@ public class ErrorValidations extends BaseTest{
 		
 		ProductCatalog pd = l.LogininApplication("cpat@gmail.com", "Chin@123");
 		l.getErrorMessage();
-		Assert.assertEquals("Incorrect  or password", l.getErrorMessage());
+		Assert.assertEquals("Incorrect email or password.", l.getErrorMessage());
 	}
 	
 	@Test		//Test Case2
