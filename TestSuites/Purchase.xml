@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite parallel="tests" name="Suite">
+
+<!--Running tests by groups-->
+	<groups>
+		<run>
+			<include name="purchase"></include>
+		</run>
+	</groups>
+  
+  <!-- First Test: Submit Order Test -->
+  <!--Thread count 5 is nothing but maximun 5 methods can run from the same class-->
+  <test thread-count="5" name="Submit Order Test">
+    <classes>
+      <class name="Projects.FrameWorkDevelopment.SubmitOrderTest"/>
+    </classes>
+  </test>
+
+  <!-- Second Test: Error Validations -->
+  <test thread-count="5" name="Error Validations Test">
+    <classes>
+      <class name="Projects.FrameWorkDevelopment.ErrorValidations"/>
+    </classes>
+  </test>
+
+</suite> <!-- Suite -->
+
